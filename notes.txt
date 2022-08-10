@@ -1,0 +1,235 @@
+//This notes file is made specifically for Python taught in CodingDojo
+
+//Python Syntax
+
+PEP 8 states that we should be using whitespaces
+if, functions, loops, classes we need indentation of whitespaces
+
+Python does not use brackets or braces, instead it uses indentation
+
+What is a code block?
+A code block is a set of lines of code that belong together. For example, the first line of an if statement gives the condition, but the line(s) that follow explain what we want to happen if the condition is true. Examples of code block keywords include:
+
+def (functions)
+if, elif, else (conditional statements)
+for, while (loops)
+Class (classes)
+
+First line of statement will end with a colon (:)
+
+While developing a block of code, you can use pass statement after the indent to help run the block
+example:
+
+x = 1
+if x < 2:
+  pass
+
+//Data Types
+
+Primitive Data Types-
+
+Boolean: True of False (must be uppercase)
+Numbers: Ints (whole numbers), floating point (decimals), Complex numbers
+String: anything that is between double quotes or it is considered literal text
+
+Composite Types-
+
+Tuples: these are immutable meaning that they cannot be modified and whole mixed data types
+example - dog = ("Bruce", "Cocker Spaniel", 19, False)
+
+Lists: they are mutable; holds a group of values and typically holds data related to one another
+example -
+
+empty_list = []
+ninjas = ['Rozen', 'KB', 'Oliver']
+print(ninjas[2]) 	# output: Oliver
+ninjas[0] = 'Francis'
+ninjas.append('Michael')
+print(ninjas)	# output: ['Francis', 'KB', 'Oliver', 'Michael']
+ninjas.pop()
+print(ninjas)	# output: ['Francis', 'KB', 'Oliver']
+ninjas.pop(1)
+print(ninjas)	# output: ['Francis', 'Oliver']
+
+Dictionary: a group of key-value pairs
+example - 
+empty_dict = {}
+new_person = {'name': 'John', 'age': 38, 'weight': 160.2, 'has_glasses': False}
+new_person['name'] = 'Jack'	# updates if the key exists, adds a key-value pair if it doesn't
+new_person['hobbies'] = ['climbing', 'coding']
+print(new_person)
+# output: {'name': 'Jack', 'age': 38, 'weight': 160.2, 'has_glasses': False, 'hobbies': ['climbing', 'coding']}
+w = new_person.pop('weight')	# removes the specified key and returns the value
+print(w)		# output: 160.2
+print(new_person)
+# output: {'name': 'Jack', 'age': 38, 'has_glasses': False, 'hobbies': ['climbing', 'coding']}
+
+Common Functions - 
+
+type() - you can get the type of a specific object
+len() - for items that have the length attribute, you can use len to get the length
+
+//Numbers
+
+                                Javascript	                                        Python
+int	                        var num = 35;	                                        num = 25
+float	                        var dec = 4.2;	                                        dec = 4.2
+log	                        console.log(num);	                                print(num)
+type check	                console.log(typeof(dec));	                        print(type(dec))
+conversion	                N/A.  All numbers are floating point in Javascript	num_to_dec = float(num)
+random number between 2-5	var rand_num = Math.floor(Math.random() * 4) + 2	import random rand_num = random.randint(2,5)
+
+Conversion - 
+
+int_to_float = float(35)
+float_to_int = int(44.2)
+int_to_complex = complex(35)
+print(int_to_float)
+print(float_to_int)
+print(int_to_complex)
+print(type(int_to_float))
+print(type(float_to_int))
+print(type(int_to_complex))
+
+Random Number - 
+***you will need to import the random module***
+
+import random
+print(random.randint(2,5)) # provides a random number between 2 and 5
+
+//Strings
+
+String Literals - 
+
+They are anything wrapped in double or single quotes
+
+Concatenation - 
+
+Combining to strings and sending it to the output
+first_name = "kevin "
+last_name = "robbs"
+
+print(first_name + last_name)
+
+
+//Lists
+
+they are like arrays and are indexed at 0
+they have built in methods
+defined with [] brackets
+can store any data
+they are mutable
+
+ninjas = ['Rozen', 'KB', 'Oliver']
+my_list = ['4', ['list', 'in', 'a', 'list'], 987]
+empty_list = []
+
+sides of the operator
+left hand side is location in memory
+right hand side is the value for that location
+
+Appending - 
+
+.append() method will allow you to add a value to the of the given list
+some_list = []
+some_list.append('value')
+
+Slicing - 
+
+[:] returns a portion of the list
+
+words = ["this", "is", "a", "sentence", "!"]
+print(words[0:4]) will print out [ 'this', 'is', 'a', 'sentence', '!']
+
+number on the left represents the starting index
+number on the right represent how many indexes it will travel
+
+//Built in Functions for list
+.append() - will append a value to end of the sequence if it is mutable
+.pop() - will remove a specific index or if nothing is given it will remove the last value
+.index() - returns the given index or an error
+.reverse() - reverses order of elements in place
+.sort() - sorts the items
+
+
+//Tuples
+
+immutable data set
+they are defined with ()
+they have built in methods
+index starts at 0
+
+tuple_data = ('physics', 'chemistry', 1997, 2000)
+tuple_num = (1, 2, 3, 4, 5 )
+tuple_letters = "a", "b", "c", "d"
+
+
+//Conditionals
+if
+elif
+else
+Operators - ==, <=, >= !=, <, >, and, or, not
+
+
+==	Checks if the value of two operands are equal									1 == 2 => False
+																	1 == 1 => True
+
+!=	Checks if the value of two operands are not equal								1 != 2 => True
+																	1 != 1 => False
+
+>	Checks if the value of left operand is greater than the value of right operand			1 > 2 => False
+																	2 > 1 => True
+
+<	Checks if the value of left operand is less than the value of right operand				1 < 2 => True
+																	2 < 1 => False
+
+>=	Checks if the value of left operand is greater than or equal to the value of right operand	1 >= 2 => False
+																	2 >= 2 => True
+
+<=	Checks if the value of left operand is less than or equal to the value of right operand		1 <= 2 => True
+																	2 <= 2 => True
+
+and	Checks that each expression on the left and right are both True						(1 <= 2) and (2 <= 3) => True
+																	(1 <= 2) and (2 >= 3) => False
+																	(1 >= 2) and (2 >= 3) => False
+
+or	Checks if either the expression on the left or right is True						(1 <= 2) or (2 >= 3) => True
+																	(1 <= 2) or (2 <= 3) => True
+																	(1 >= 2) or (2 >= 3) => False
+
+not	Reverses the true-false value of the operand									not True => False
+																	not False => True
+																	not 1 >= 2 => True
+																	not 1 <= 2 => False
+																	not (1 <= 2 and 2 >= 3)  => True
+																	not 1 <= 2 and 2 >= 3 => False
+
+
+//Loops
+For - 
+
+Range() method
+range(3) - will start at index 0 and go to three and stop, not printing 3
+range(0, 5) 0 is the starting index, 5 is the stopping index, incrementing by 1 by default
+range(0, 5, 2) 0 is the starting index, 5 is the stopping index, incrementing by 2
+
+for i in range(3):
+	print(i)
+
+#will print 0, 1, 2#
+
+if you have a list:
+for i in my_list:
+	print(i)
+this will print the value of each index in the list
+
+While - 
+
+count = 0
+while count <= 5:
+    print("looping - ", count)
+    count += 1
+
+Break - will exit the loop
+continue - will go to the beginning of the loop
+
