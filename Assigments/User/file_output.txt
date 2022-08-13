@@ -1,0 +1,95 @@
+User info 
+First Name: Kevin 
+Last Name: Robbs 
+Email: kevin@myemail.com 
+Age: 32
+
+Kevin, you have enrolled in our rewards program
+Your total rewards points are 200!
+
+You have 200 points to spend
+You are spending 50 points...
+You have 150 points left
+
+Molly, you have enrolled in our rewards program
+Your total rewards points are 200!
+
+You have 200 points to spend
+You are spending 80 points...
+You have 120 points left
+
+User info 
+First Name: Kevin 
+Last Name: Robbs 
+Email: kevin@myemail.com 
+Age: 32
+
+User info 
+First Name: Molly 
+Last Name: Robbs 
+Email: molly@myemail.com 
+Age: 24
+
+User info 
+First Name: Birdie 
+Last Name: Robbs
+Email: birdie@myemail.com
+Age: 1
+
+Looks like you already signed up to be a rewards member
+You have 150 points remaining
+
+Birdie, you have enrolled in our rewards program
+Your total rewards points are 200!
+
+You have 200 points to spend
+You are spending 200 points...
+You have 0 points left
+
+PS C:\Users\robbs> & C:/Users/robbs/AppData/Local/Programs/Python/Python310/python.exe c:/Users/robbs/OneDrive/Documents/CodingDojo/Python/Assigments/User/file.py
+User info 
+First Name: Kevin
+Last Name: Robbs
+Email: kevin@myemail.com
+Age: 32
+
+Kevin, you have enrolled in our rewards program
+Your total rewards points are 200!
+
+You have 200 points to spend
+You are spending 50 points...
+You have 150 points left
+
+Molly, you have enrolled in our rewards program
+Your total rewards points are 200!
+
+You have 200 points to spend
+You are spending 80 points...
+You have 120 points left
+
+User info
+First Name: Kevin
+Last Name: Robbs
+Email: kevin@myemail.com
+Age: 32
+
+User info
+First Name: Molly
+Last Name: Robbs
+Email: molly@myemail.com
+Age: 24
+
+User info
+First Name: Birdie
+Last Name: Robbs
+Email: birdie@myemail.com
+Age: 1
+
+Looks like you already signed up to be a rewards member
+You have 150 points remaining
+
+Birdie, you have enrolled in our rewards program
+Your total rewards points are 200!
+
+Insufficient points on your account, please try again!
+You only have 200 points to spend
