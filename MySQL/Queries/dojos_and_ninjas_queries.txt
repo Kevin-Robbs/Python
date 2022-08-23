@@ -1,0 +1,27 @@
+use dojos_and_ninjas;
+
+-- insert into dojos (name, created_at, updated_at)
+-- values 
+-- 	("Bellavue", current_timestamp(), current_timestamp()),
+--     ("Los Angeles", current_timestamp(), current_timestamp()),
+--     ("Silicon Valley", current_timestamp(), current_timestamp()),
+--     ("Remote", current_timestamp(), current_timestamp());
+
+-- delete from dojos
+-- where id = 4;
+
+-- insert into ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+-- values 
+-- 	("Austin", "Robbs", 32, current_timestamp(), current_timestamp(), 3),
+--     ("Aaron", "Robbs", 30, current_timestamp(), current_timestamp(), 3),
+--     ("William", "Robbs", 29, current_timestamp(), current_timestamp(), 3);
+
+-- select * from ninjas
+-- where dojo_id = 1;
+
+-- select * from ninjas
+-- where dojo_id = 3
+
+-- select dojos.name from ninjas join 
+-- dojos on ninjas.dojo_id = dojos.id
+-- where ninjas.id = 12; 

@@ -1,0 +1,89 @@
+schema and table:
+
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema users
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema users
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `users` DEFAULT CHARACTER SET utf8 ;
+USE `users` ;
+
+-- -----------------------------------------------------
+-- Table `users`.`users`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `users`.`users` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `first_name` VARCHAR(45) NOT NULL,
+  `last_name` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
+  `created_at` DATETIME NOT NULL,
+  `updated_at` DATETIME NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+########################################################################################
+creating three new users:
+
+USE users;
+
+INSERT INTO users (first_name, last_name, email, created_at, updated_at)
+VALUES ("Kevin","Robbs","krobbs@family.com", current_timestamp(), current_timestamp()),
+("Molly","Robbs","mrobbs@family.com", current_timestamp(), current_timestamp()),
+("Birdie","Robbs","brobbs@family.com", current_timestamp(), current_timestamp());
+
+########################################################################################
+querying all users:
+
+SELECT * FROM users;
+
+########################################################################################
+querying first user by email:
+
+SELECT * FROM users
+WHERE email = "krobbs@family.com";
+
+########################################################################################
+query last user by ID
+
+select * from users
+where id = 3;
+
+########################################################################################
+change user with id 3 to the last name of pancakes:
+
+UPDATE users 
+SET last_name = 'Pancakes'
+WHERE id = 3;
+
+########################################################################################
+delete id 2
+
+DELETE FROM users
+WHERE id = 2;
+
+########################################################################################
+retrieve all users sorted by their first name
+
+SELECT *
+FROM users
+ORDER BY first_name
+
+########################################################################################
+BONUS: get users by first name in descending order
+
+SELECT *
+FROM users
+ORDER BY first_name desc
