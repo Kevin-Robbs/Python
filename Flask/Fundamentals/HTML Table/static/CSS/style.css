@@ -1,0 +1,8 @@
+.table{
+    width: 60% !important; 
+    margin: 2em auto;
+}
+
+thead{
+    background-color: lightcyan;
+}
