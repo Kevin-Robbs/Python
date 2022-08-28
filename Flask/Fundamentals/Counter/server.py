@@ -7,7 +7,7 @@ app.secret_key = secrets.token_hex()
 @app.route('/')
 def counterIndex():
     if 'counter' not in session:
-        session['counter'] = 0
+        session['counter'] = 1
     else:
         session['counter'] += 1
     return render_template('index.html')

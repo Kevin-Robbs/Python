@@ -1,0 +1,44 @@
+*{
+    margin: 2em auto;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+.button_div{
+    text-align: center;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+button{
+    width: 5rem;
+    height: 2rem;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+#add{
+    background-color: greenyellow;
+}
+
+#add:hover{
+    background-color: rgba(172, 255, 47, 0.516);
+}
+
+#refresh{
+    background-color: aqua;
+}
+
+#refresh:hover{
+    background-color: rgba(0, 255, 255, 0.523);
+}

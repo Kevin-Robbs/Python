@@ -9,9 +9,11 @@
 </head>
 <body>
     <h1>Counter</h1>
-    <p>{{ session['counter'] }} times.</p>
-    <a href="/">Add 1</a>
-    <a href="/destroy">Clear Count</a>
+    <p>{{ session['counter'] }} times</p>
+    <div class="button_div">
+        <button id="add"><a href="/">Add</a></button>
+        <button id="refresh"><a href="/destroy">refresh</a></button>
+    </div>
 
     <script src="{{ url_for('static', filename='JS/script.js') }}"></script>
 </body>
