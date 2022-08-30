@@ -8,10 +8,10 @@
     <body>
         <div class="main_div">
             <div class="border_container">
-                <p id="user_name">{{information['name']}}</p>
-                <p>Dojo Location: {{information['location']}}</p>
-                <p>Favorite Language:{{information['language']}}</p>
-                <p> Comment: {{information['comment']}}</p>
+                <p id="user_name">{{session['data'].name}}</p>
+                <p>Dojo Location: {{session['data'].location}}</p>
+                <p>Favorite Language:{{session['data'].favorite}}</p>
+                <p> Comment: {{session['data'].comment}}</p>
             </div>
             <hr>
             <a href="/"><button>Home</button></a>

@@ -1,6 +1,8 @@
-from pydoc import render_doc
 from flask import *
+import secrets
 app = Flask(__name__)
+
+app.secret_key = secrets.token_hex()
 
 @app.route('/')
 def indexRoute():
@@ -14,7 +16,9 @@ def resultRoute():
         'language': request.form['language'],
         'comment': request.form['comment']
     }
-    return render_template('result.html', information = data)
+
+    session['data'] = data
+    return render_template('result.html')
 
 if __name__=='__main__':
     app.run(debug=True)
