@@ -1,0 +1,63 @@
+@media screen and (max-width: 1328px) {
+    .main_div{
+        min-width: 20em;
+    }
+}
+
+*{
+    margin: 0%;
+    padding: 0;
+    display: block;
+}
+
+.main_div{
+    width: 20em;
+    margin: 3em auto;
+    background-color: #343a3e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.form_div{
+    margin: 1em 0;
+}
+
+.item_div{
+    margin-bottom: .75em;
+}
+
+.item_div > *{
+    margin-bottom: .25em;
+}
+
+
+h1{
+    color: rgb(228, 186, 1);
+    margin-bottom: .5em;
+}
+
+label{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+
+input, textarea, select, button{
+    border-radius: 5px;
+}
+
+button{
+    width: 4.5em;
+    height: 2.5em;
+    margin: 0 auto;
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.402);
+}
+
+button:hover{
+    background-color: rgb(31, 119, 208);
+}
