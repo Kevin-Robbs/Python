@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.nav_bar {
+    background-color: #393f45;
+    width: 100%;
+    padding: 1em;
+}
+
+#logo_link {
+    text-decoration: none;
+}
+
+h1 {
+    display: inline;
+    margin: 1em;
+    color: goldenrod;
+    font-size: x-large;
+}
+
+.form_content{
+    width: 28em;
+    background-color: #393f45;
+    margin: 1em auto;
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    margin: 3em;
+}
+
+label{
+    color: goldenrod;
+}
+
+form > *{
+    display: block;
+}
+
+form > input {
+    padding: .25em;
+    margin: .25em 0 2em;
+}
+
+form > button{
+    width: 5em;
+    height: 2em;
+    background-color: goldenrod;
+    border: 1px solid #393f45;
+    margin: 0 auto;
+    border-radius: 3px;
+}
