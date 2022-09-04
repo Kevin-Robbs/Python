@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/index_style.css')}}">
+    <title>Home | User CRUD</title>
+</head>
+<body>
+    <nav class="nav_bar">
+        <a href="/" id="logo_link">
+            <h1>Users CRUD</h1>
+        </a>
+    </nav>
+    <div class="content_wrapper">
+        <h2>All Users</h2>
+        <table>
+            <thead>
+                <tr>
+                    <td id="t_head">ID</td>
+                    <td id="t_head">Full Name</td>
+                    <td id="t_head">Email</td>
+                    <td id="t_head">Actions</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in all_users %}
+                <tr>
+                    <td>{{user.id}}</td>
+                    <td>{{user.full_name}}</td>
+                    <td>{{user.email}}</td>
+                    <td><a href="/user/{{user.id}}"><button id="index__button">Show</button></a><a href="/edit_user/{{user.id}}" id="action_link"><button id="index__button">Edit</button> </a><a href="/delete/{{user.id}}" id="action_link"><button id="index__button">Delete</button></a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/new_user"><button class="index_button">Add User</button></a>
+    </div>
+</body>
+</html>
