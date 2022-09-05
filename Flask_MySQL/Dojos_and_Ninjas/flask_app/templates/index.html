@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/index_style.css')}}">
+    <title>Dojos & Ninjas</title>
+</head>
+<body>
+    <nav class="nav_wrapper">
+        <a href="/">
+            <h1>Dojo Playground</h1>
+        </a>
+        <div class="nav_login">
+            <a href="/">Login</a>
+            <a href="/">Sign Up</a>
+        </div>
+    </nav>
+    <div class="content_wrapper">
+        <div class="left_wrapper">
+            <h2>New Dojo</h2>
+            <form action="/create_dojo" method="post">
+                <label for="d_name">Name:</label>
+                <input type="text" name="d_name">
+                <button type="submit">Create</button>
+            </form>
+        </div>
+        <div class="right_wrapper">
+            <h2>All Dojos</h2>
+            <div class="dojo_wrapper">
+                {% for dojo in dojos%}
+                <a href="/dojo/{{dojo.id}}">{{dojo.name}}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="post_amble">
+        <p>Kevin Robbs | Coding Dojo | '22</p>
+    </div>
+</body>
+</html>

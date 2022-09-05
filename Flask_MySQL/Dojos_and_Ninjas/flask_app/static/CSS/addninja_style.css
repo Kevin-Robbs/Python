@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+h1{
+    font-weight: bold;
+    font-family: cursive;
+}
+
+.nav_wrapper{
+    background-color: darkseagreen;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.nav_wrapper > a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav_login{
+    width: 7em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1em;
+}
+
+.nav_login > a{
+    text-decoration: none;
+    color: black;
+    font-family: cursive;
+    font-weight: bold;
+}
+
+.nav_login > a:hover{
+    text-decoration: underline antiquewhite;
+    font-size: large;
+    transition-duration: 200ms;
+}
+
+.main_wrapper{
+    width: 20em;
+    margin: 1em auto;
+}
+
+h2{
+    margin-top: 2em;
+}
+
+form{
+    margin: 1em auto;
+    display: block;
+    background-color: darkseagreen;
+    padding: 2em 2em .5em;
+    border-radius: 3px;
+}
+
+form > *{
+    display: block;
+}
+
+.form_item_wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.form_item_wrapper > select{
+    width: 8em;
+    height: 2em;
+    border-radius: 3px;
+}
+
+.form_item_wrapper > input{
+    width: 13em;
+    height: 1.75em;
+    border-radius: 3px;
+}
+
+form > button{
+    margin: 2em auto;
+    width: 5em;
+    height: 2.5em;
+    border: 2px solid gainsboro;
+    background-color: antiquewhite;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+form > button:hover{
+    background-color: rgb(227, 212, 195);
+}

@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+h1{
+    font-weight: bold;
+    font-family: cursive;
+}
+
+.nav_wrapper{
+    background-color: darkseagreen;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.nav_wrapper > a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav_login{
+    width: 7em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1em;
+}
+
+.nav_login > a{
+    text-decoration: none;
+    color: black;
+    font-family: cursive;
+    font-weight: bold;
+}
+
+.nav_login > a:hover{
+    text-decoration: underline antiquewhite;
+    font-size: large;
+    transition-duration: 200ms;
+}
+
+.content_wrapper{
+    width: 70em;
+    margin: 4em auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.left_wrapper{
+    width: 30%;
+    background-color: darkseagreen;
+    padding: 1em;
+    border-radius: 5px;
+    height: fit-content;
+}
+
+.right_wrapper{
+    width: 50%;
+    border-radius: 5px;
+    background-color: darkseagreen;
+    padding: 1em;
+}
+
+.left_wrapper > h2{
+    margin-bottom: 1em;
+    font-family: cursive;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.right_wrapper > h2{
+    margin-bottom: 1em;
+    font-family: cursive;
+    font-weight: bold;
+    font-size: x-large;
+    border-bottom: 1px solid black;
+    padding-bottom: 1em;
+}
+
+form{
+    display: block;
+}
+
+form > button{
+    display: block;
+    margin: 2em 0 0 4.5em;
+    width: 5em;
+    height: 2.5em;
+    border: 2px solid gainsboro;
+    background-color: antiquewhite;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+form > button:hover{
+    background-color: rgb(227, 212, 195);
+}
+
+form > input{
+    margin-left: .5em;
+    border-radius: 3px;
+    height: 2em;
+    padding-left: 1em;
+    font-size: medium;
+}
+
+.dojo_wrapper{
+    width: 100%;
+}
+
+.dojo_wrapper > a{
+    display: block;
+    width: max-content;
+    margin: 0 0 1em 0;
+    text-decoration: none;
+    color: black;
+    transition-duration: 600ms;
+}
+
+.dojo_wrapper > a:hover{
+    font-size: larger;
+    transition-duration: 200ms;
+}
+
+.post_amble{
+    text-align: center;
+    padding: 3em;
+}

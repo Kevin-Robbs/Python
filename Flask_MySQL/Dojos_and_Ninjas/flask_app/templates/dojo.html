@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/dojo_style.css')}}">
+    <title>Dojo | {{dojo[0]['d_name']}}</title>
+</head>
+<body>
+    <nav class="nav_wrapper">
+        <a href="/">
+            <h1>Dojo Playground</h1>
+        </a>
+        <div class="nav_login">
+            <a href="/">Login</a>
+            <a href="/">Sign Up</a>
+        </div>
+    </nav>
+    <div class="main_wrapper">
+        <h2>{{dojo[0]['d_name']}} Ninjas</h2>
+        <div class="content_wrapper">
+            <table class="content_table">
+                <thead>
+                    <tr class="content_tr">
+                        <td>Name</td>
+                        <td>Age</td>
+                        <td>Email</td>
+                        <td>Enrollment Date</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for ninja in ninjas %}
+                    <tr id="ninja_row">
+                        <td>{{ninja['name']}}</td>
+                        <td>{{ninja['age']}}</td>
+                        <td>{{ninja['email']}}</td>
+                        <td>{{ninja['created_at']}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <a href="/addNinja"><button>Add User</button></a>
+    </div>
+</body>
+</html>

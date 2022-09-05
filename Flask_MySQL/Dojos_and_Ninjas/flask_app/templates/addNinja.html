@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/addninja_style.css')}}">
+    <title>Dojo Playground | Add Ninja</title>
+</head>
+<body>
+    <nav class="nav_wrapper">
+        <a href="/">
+            <h1>Dojo Playground</h1>
+        </a>
+        <div class="nav_login">
+            <a href="/">Login</a>
+            <a href="/">Sign Up</a>
+        </div>
+    </nav>
+    <div class="main_wrapper">
+        <h2>New Ninja</h2>
+        <form action="/create_ninja" method="post">
+            <div class="form_item_wrapper">
+                <label for="">Dojo:</label>
+                <select name="dojo_select">
+                {% for dojo in dojos%}
+                <option value="{{dojo.id}}">{{dojo.name}}</option>
+                {% endfor %}
+                </select>
+            </div>
+            <div class="form_item_wrapper">
+                <label for="name">Name:</label>
+                <input type="text" name="name">
+            </div>
+            <div class="form_item_wrapper">
+                <label for="email">Email:</label>
+                <input type="text" name="email">
+            </div>
+            <div class="form_item_wrapper">
+                <label for="age">Age:</label>
+                <input type="text" name="age">
+            </div>
+            <button type="submit">Create</button>
+        </form>
+    </div>
+</body>
+</html>
