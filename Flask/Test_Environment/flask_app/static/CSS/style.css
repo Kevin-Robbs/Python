@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav_wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: -999;
+}
+
+#dojo_logo{
+    width: 8em;
+    height: 8em;
+}
+
+.main_wrapper{
+    width: 45em;
+    margin: 1em auto;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 2px 0px 10px black;
+    z-index: 10000;
+}
+
+.left_wrapper{
+    padding: 3em 1em;
+}
+
+h2{
+    text-align: center;
+}
+
+#flashed_messages{
+    margin: 1em auto 0;
+    width: 20em;
+    padding: .25em;
+    color: red;
+    text-align: center;
+    border: 2px solid red;
+    background-color: rgb(255, 193, 193);
+    border-radius: 5px;
+}
+
+form{
+    width: 20em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: .5em 0 0;
+    padding: 1em 1em 0;
+}
+
+#f_input{
+    padding: .75em 0 .75em .75em;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 3px;
+}
+
+#f_input:focus{
+    border: 3px solid blueviolet;
+    outline: none;
+    box-shadow: 2px 0px 5px blueviolet;
+}
+
+#f_button{
+    padding: .5em 0;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 5px;
+    border: 2px solid #e2e2e2;
+    margin: 1em 0;
+}
+
+#f_button:hover{
+    background-color: blueviolet;
+}
+
+.links{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1em;
+}
+
+.links > a{
+    color: black;
+    font-weight: bold;
+}
+
+.links > a:hover{
+    color: blueviolet;
+}
+
+.right_wrapper{
+    width: 25em;
+    background-image: linear-gradient(to bottom, rgb(176, 125, 224), blueviolet);
+}
+
+#r_form{
+    margin: 1em auto 0;
+}
+
+#r_form > button{
+    margin-bottom: 0;
+}
+
+.r_main_wrapper{
+    flex-direction: column;
+    width: 35em;
+}
+
+#r_heading{
+    margin-top: 2em;    
+}
+
+.login_wrapper{
+    margin: 1em auto 1.5em;
+    width: 20em;
+}
+
+.login_wrapper > p{
+    text-align: center;
+}
+
+#l_button{
+    margin: 1em auto;
+    width: 100%;
+    padding: .5em 0;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 5px;
+    border: 2px solid #e2e2e2;
+    background-color: blueviolet;
+}
+
+#l_button:hover{
+    background-color: #e2e2e2;
+    outline: none;
+    border: 2px solid blueviolet;
+    box-shadow: 2px 0px 5px blueviolet;
+}
+
+.logout_wrapper{
+    width: max-content;
+    margin: 20em auto;
+}
+.logout_wrapper > a > button{
+    width: 10em;
+    padding: 2em;
+    background-color: blueviolet;
+    border-radius: 5px;
+}

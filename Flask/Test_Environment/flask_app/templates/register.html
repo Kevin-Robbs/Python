@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css')}}">
+    <title>Registration</title>
+</head>
+<body>
+    <div class="nav_wrapper">
+        <a href="/"><img src='{{ url_for("static", filename="IMG/dojologo-removebg-preview.png")}}' id="dojo_logo"></a>
+    </div>
+    <div class="main_wrapper r_main_wrapper">
+        <h2 id="r_heading">Register here</h2>
+        {% with messages = get_flashed_messages()%}
+            {% for message in messages %}
+                {% if message %}
+                    <p id="flashed_messages">{{ message }}</p>
+                {% endif %}
+            {% endfor %}
+        {% endwith %}
+        <form action="/register_user" method="post" id="r_form">
+            <input type="hidden" name="r_form">
+            <input type="text" name="f_name" placeholder="First Name" id="f_input">
+            <input type="text" name="l_name" placeholder="Last Name" id="f_input">
+            <input type="email" name="email" placeholder="Email" id="f_input">
+            <input type="password" name="password" placeholder="Password" id="f_input">
+            <button type="submit" id="f_button">Register</button>
+        </form>
+        <div class="login_wrapper">
+            <p>- or- </p>
+            <a href="/"><button id="l_button">Login</button></a>
+        </div>
+    </div>
+    
+</body>
+</html>
